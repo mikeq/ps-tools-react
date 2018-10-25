@@ -1,0 +1,37 @@
+{
+  "name": "@oakheart/ps-tools",
+  "version": "1.0.2",
+  "description": "Javascript tooling setup",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "eslint_check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "prettier": "prettier --write *.{js,jsx,json,css,md}",
+    "lint": "eslint --color .",
+    "test": "jest"
+  },
+  "bin": {
+    "ps-tools": "./bin/ps-tools.js"
+  },
+  "author": "Mike Quinn",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "enzyme": "^3.3.0",
+    "eslint": "^5.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "jest": "^23.4.2",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.0",
+    "yargs": "^12.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
