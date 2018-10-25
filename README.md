@@ -3,9 +3,9 @@
 ## Install as development dependency
 
 ```
-C:\Users\1352145\projects
+C:\Users\123456\projects
 λ cd myproject
-C:\Users\1352145\projects\myproject
+C:\Users\123456\projects\myproject
 λ git init
 λ yarn add --dev oakheart/tools
 ```
@@ -13,7 +13,7 @@ C:\Users\1352145\projects\myproject
 ## Display Help
 
 ```
-C:\Users\1352145\projects\myproject
+C:\Users\123456\projects\myproject
 λ node_modules\.bin\ps-tools -h
 Usage: ps-tools.js <command> [options]
 
@@ -28,7 +28,7 @@ Options:
 ## Initialise tooling
 
 ```
-C:\Users\1352145\projects\myproject
+C:\Users\123456\projects\myproject
 λ node_modules\.bin\ps-tools init
 ```
 
