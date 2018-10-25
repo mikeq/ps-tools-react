@@ -7,7 +7,7 @@ C:\Users\123456\projects
 λ cd myproject
 C:\Users\123456\projects\myproject
 λ git init
-λ yarn add --dev oakheart/tools
+λ yarn add --dev @oakheart/tools
 ```
 
 ## Display Help
