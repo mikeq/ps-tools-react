@@ -1,6 +1,6 @@
 {
   "name": "@oakheart/ps-tools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Javascript tooling setup",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   },
   "author": "Mike Quinn",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mikeq/ps-tools.git"
+    "type": "git",
+    "url": "https://github.com/mikeq/ps-tools.git"
   },
   "license": "ISC",
   "dependencies": {
