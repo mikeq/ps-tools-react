@@ -7,17 +7,19 @@ const code = JSON.parse(file.toString());
 
 console.log(chalk.yellow('Adding scripts to package.json...'));
 const newScripts = {
-  precommit: 'lint-staged',
   eslint_check:
     'eslint --print-config .eslintrc.json | eslint-config-prettier-check',
   prettier: 'prettier --write *.{js,jsx,json,css,md}',
   lint: 'eslint --color .',
   ...code.scripts,
-  test: 'jest',
 };
 
 code['lint-staged'] = {
   '*.{js,jsx,json,css,md}': ['prettier --write', 'git add'],
+};
+
+code['husky'] = {
+  hooks: { 'pre-commit': 'lint-staged' },
 };
 
 code.scripts = newScripts;

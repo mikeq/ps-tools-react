@@ -1,10 +1,9 @@
 {
   "name": "@oakheart/ps-tools-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Javascript React tooling setup",
   "main": "index.js",
   "scripts": {
-    "precommit": "lint-staged",
     "eslint_check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
     "prettier": "prettier --write *.{js,jsx,json,css,md}",
     "lint": "eslint --color .",
@@ -37,5 +36,10 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
