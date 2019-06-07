@@ -5,9 +5,7 @@ const chalk = require('chalk');
 yargs
   .usage('Usage: $0 <command> [options]')
   .command('init', 'Initialise the javascript tooling', () => {
-    console.log(
-      chalk.blue.bold('Setting up the javascript tools'),
-    );
+    console.log(chalk.blue.bold('Setting up the javascript tools'));
     require('./scripts');
     require('./prettier_resource');
     require('./linter');

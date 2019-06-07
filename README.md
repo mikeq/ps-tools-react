@@ -1,4 +1,4 @@
-# Javascript tooling
+# Javascript React tooling
 
 ## Install as development dependency
 
@@ -7,18 +7,18 @@ C:\Users\123456\projects
 λ cd myproject
 C:\Users\123456\projects\myproject
 λ git init
-λ yarn add --dev @oakheart/ps-tools
+λ yarn add --dev @oakheart/ps-tools-react
 ```
 
 ## Display Help
 
 ```
 C:\Users\123456\projects\myproject
-λ node_modules\.bin\ps-tools -h
-Usage: ps-tools.js <command> [options]
+λ node_modules\.bin\ps-tools-react -h
+Usage: ps-tools-react.js <command> [options]
 
 Commands:
-  ps-tools.js init  Initialise the javascript tooling
+  ps-tools-react.js init  Initialise the javascript React tooling
 
 Options:
   --version    Show version number
@@ -29,12 +29,12 @@ Options:
 
 ```
 C:\Users\123456\projects\myproject
-λ node_modules\.bin\ps-tools init
+λ node_modules\.bin\ps-tools-react init
 ```
 
 ### What it does
 
-This script sets up your project environment with everything required for linting, formatting and testing of your Javascript project (NodeJS or React).
+This script sets up your project environment with everything required for linting, formatting and testing of your Javascript project (React).
 
 It will install these npm packages
 
