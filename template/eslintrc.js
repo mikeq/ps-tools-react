@@ -10,6 +10,7 @@ module.exports = {
       'eslint:recommended',
       'plugin:react/recommended',
       'plugin:prettier/recommended',
+      'plugin:jsx-a11y/recommended',
     ],
     parserOptions: {
       ecmaVersion: 2018,
@@ -18,7 +19,7 @@ module.exports = {
         jsx: true,
       },
     },
-    plugins: ['react'],
+    plugins: ['react', 'jsx-a11y'],
     rules: {
       'no-console': 'warn',
     },

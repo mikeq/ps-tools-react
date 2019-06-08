@@ -41,10 +41,11 @@ It will install these npm packages
 - eslint
 - prettier
 - jest
-- enzyme
+- @testing-library/react
 - eslint-config-prettier
 - eslint-plugin-prettier
 - eslint-plugin-react
+- eslint-plugin-jsx-a11y
 - husky
 - lint-staged
 
@@ -55,7 +56,6 @@ The following are added to your package.json file
 ```
 ...
   "scripts": {
-    "precommit": "lint-staged",
     "eslint_check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
     "prettier": "prettier --write *.{js,jsx,json,css,md}",
     "lint": "eslint --color .",
@@ -74,6 +74,11 @@ and
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 ...
 ```
