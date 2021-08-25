@@ -7,8 +7,6 @@ const code = JSON.parse(file.toString());
 
 console.log(chalk.yellow('Adding scripts to package.json...'));
 const newScripts = {
-  eslint_check:
-    'eslint --print-config .eslintrc.json | eslint-config-prettier-check',
   prettier: 'prettier --write *.{js,jsx,json,css,md}',
   lint: 'eslint --color .',
   ...code.scripts,

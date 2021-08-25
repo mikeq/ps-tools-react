@@ -34,20 +34,20 @@ C:\Users\123456\projects\myproject
 
 ### What it does
 
-This script sets up your project environment with everything required for linting, formatting and testing of your Javascript project (React).
+This script sets up your project environment with everything required for formatting of your Javascript project (React).
 
 It will install these npm packages
 
-- eslint
 - prettier
-- jest
-- @testing-library/react
 - eslint-config-prettier
 - eslint-plugin-prettier
-- eslint-plugin-react
-- eslint-plugin-jsx-a11y
 - husky
 - lint-staged
+
+Using Create React App to initialise your project will automatically install the following:
+
+- eslint
+- @testing-library/react
 
 The following resource files are created in the root of your project `.eslintrc.json` and `.prettierrc`, these define the rules for linting and formatting.
 
@@ -56,10 +56,8 @@ The following are added to your package.json file
 ```
 ...
   "scripts": {
-    "eslint_check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
     "prettier": "prettier --write *.{js,jsx,json,css,md}",
-    "lint": "eslint --color .",
-    "test": "jest"
+    "lint": "eslint --color ."
     ...
   }
 ...

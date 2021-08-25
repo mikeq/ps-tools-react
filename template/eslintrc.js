@@ -5,12 +5,13 @@ module.exports = {
       es6: true,
       jest: true,
       browser: true,
+      commonjs: true,
     },
     extends: [
       'eslint:recommended',
-      'plugin:react/recommended',
+      'react-app',
+      'react-app/jest',
       'plugin:prettier/recommended',
-      'plugin:jsx-a11y/recommended',
     ],
     parserOptions: {
       ecmaVersion: 2018,
@@ -19,9 +20,18 @@ module.exports = {
         jsx: true,
       },
     },
-    plugins: ['react', 'jsx-a11y'],
+    plugins: [
+      'react',
+      'react-hooks',
+      'jsx-a11y',
+      'flowtype',
+      'import',
+      'testing-library',
+      'jest',
+      'prettier',
+    ],
     rules: {
-      'no-console': 'warn',
+      'no-console': 'error',
     },
   },
 };
