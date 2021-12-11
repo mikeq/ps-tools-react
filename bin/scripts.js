@@ -1,15 +1,16 @@
 #! /usr/bin/env node
-const fs = require('fs');
-const chalk = require('chalk');
+import fs from 'fs';
+import chalk from 'chalk';
 
 const file = fs.readFileSync('./package.json');
 const code = JSON.parse(file.toString());
 
-console.log(chalk.yellow('Adding scripts to package.json...'));
+console.info(chalk.yellow('Adding scripts to package.json...'));
 const newScripts = {
   prettier: 'prettier --write *.{js,jsx,json,css,md}',
   lint: 'eslint --color .',
   ...code.scripts,
+  prepare: 'husky install',
 };
 
 code['lint-staged'] = {
@@ -22,4 +23,4 @@ code['husky'] = {
 
 code.scripts = newScripts;
 fs.writeFileSync('./package.json', JSON.stringify(code, null, 2));
-console.log(chalk.green('Scripts added to package.json'));
+console.info(chalk.green('Scripts added to package.json'));

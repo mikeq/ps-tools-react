@@ -1,5 +1,9 @@
 # Javascript React tooling
 
+## Which Version?
+
+If using Node < 15 then use `@2.0.0`, if using Node >= 15 then use >= `@3.0.0`
+
 ## Install as development dependency
 
 ```
@@ -32,6 +36,8 @@ C:\Users\123456\projects\myproject
 λ node_modules\.bin\ps-tools-react init
 ```
 
+Once you have initialised you should run `yarn` again to install the Husky pre-commit hooks.
+
 ### What it does
 
 This script sets up your project environment with everything required for formatting of your Javascript project (React).
@@ -57,7 +63,8 @@ The following are added to your package.json file
 ...
   "scripts": {
     "prettier": "prettier --write *.{js,jsx,json,css,md}",
-    "lint": "eslint --color ."
+    "lint": "eslint --color .",
+    "prepare": "husky install"
     ...
   }
 ...
